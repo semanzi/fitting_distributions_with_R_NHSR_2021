@@ -27,7 +27,7 @@ descdist(my_data, discrete=FALSE, boot=500)
 # Fit specific distributions
 # Note: you will need to change the distribution names
 # Name options: "norm", "lnorm", "pois", "exp", "gamma", "nbinom", "geom", "beta", "unif"
-dists <- c("exp", "beta", "lnorm")
+dists <- c("exp", "gamma", "lnorm")
 fit <- list()
 for (i in 1:length(dists)){
   fit[[i]]  <- fitdist(my_data, dists[i])
@@ -47,7 +47,7 @@ ppcomp  (fit, legendtext = plot.legend)
 
 # Goodness of fit statistics
 # Don't forget to match your fitnames argument to your named distributions above
-f <- gofstat(fit, fitnames=c("exp", "beta", "lnorm"))
+f <- gofstat(fit, fitnames=c("exp", "gamma", "lnorm"))
 f
 
 #Estimating uncertainty in the parameters
