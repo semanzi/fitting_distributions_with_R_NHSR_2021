@@ -21,9 +21,8 @@ ui <- fluidPage(
       selectInput("fitInput","Select distributions",
                   multiple=TRUE,
                   choices=c("exp",
-                            "lnorm","norm",
-                            "pois","weibull",
-                            "nbinom","gamma")),
+                            "lnorm","norm","weibull",
+                            "gamma")),
       checkboxInput("goodCheck", "Goodness of fit"),
       checkboxInput("uncertCheck", "Uncertainty")
     ),
